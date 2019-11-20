@@ -3,6 +3,7 @@
 // задача решена с использованием треугольных чисел
 ini_set('error_reporting', E_ALL);
 ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 
 
 
@@ -38,10 +39,9 @@ function getNumRectangles($array) {
         //умножаем количество горизонтальных прямоугольников в одном этаже на количество этажей матрицы
         $comonRezNumHorizRect = $finalNumHorizontRect * $numVerticalRect;
         
-        //определяем общее число вертикальных треугольников
+        //определяем общее число вертикальных прямоугольников
         $comonRezVertRect = ($numVerticalRect-1) * $finalNumHorizontRect;
 
-        //итоговое число треугольников
         $total = $comonRezVertRect + $comonRezNumHorizRect;
         return $total;
     } else {
